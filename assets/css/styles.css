@@ -7,6 +7,9 @@
 
 /* Body styles */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: gainsboro;
@@ -130,6 +133,7 @@ video {
 /* Main content styles */
 main {
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
     padding: 20px;
 }
