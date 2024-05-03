@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Added box-sizing for better sizing consistency */
 }
 
 /* Body styles */
@@ -12,7 +11,7 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    font-weight: 400; /* Changed to regular weight for better readability */
+    font:bold;
 }
 
 /* Header styles */
@@ -25,8 +24,19 @@ header {
 
 h1 {
     margin-bottom: 10px;
-    font-size: 36px; /* Increased font size for heading */
+    font-size: 32px;
+    font-weight: bold;
     text-transform: uppercase;
+}
+
+/* Additional styles for header if needed */
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
 }
 
 /* Navigation styles */
@@ -41,13 +51,34 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin-right: 15px; /* Increased margin for better spacing */
-    transition: color 0.3s ease; /* Added transition for smoother hover effect */
+    margin-right: 10px;
 }
 
 nav a:hover {
     color: #ffd700;
 }
+
+img,
+video {
+    border-radius: 10px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 divided by 16) */
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /* Hero section styles */
 .hero-section {
@@ -56,7 +87,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    gap: 15px; /* Increased gap between items */
+    gap: 10px;
     background: linear-gradient(to bottom right, #333, #555);
 }
 
@@ -65,24 +96,30 @@ nav a:hover {
     flex: 1;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adjusted box shadow for depth */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin: 10px;
 }
 
 .hero-card:hover {
-    transform: translateY(-5px); /* Changed scale to translateY for elevation effect */
+    transform: scale(1.01);
+}
+
+.hero-card img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Main section styles */
 .main-section {
     padding: 20px;
-    background-color: #f9f9f9; /* Changed background color for contrast */
+    background-color: #fff;
     margin-top: 20px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adjusted box shadow for depth */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .main-section h2 {
-    margin-bottom: 15px; /* Increased margin for better spacing */
+    margin-bottom: 10px;
 }
 
 /* Blog post styles */
@@ -90,17 +127,22 @@ nav a:hover {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adjusted box shadow for depth */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .blog-post:hover {
-    transform: translateY(-5px); /* Changed scale to translateY for elevation effect */
+    transform: scale(1.02);
 }
 
 .blog-post h2 {
-    margin-bottom: 15px; /* Increased margin for better spacing */
-    font-size: 24px; /* Adjusted font size for readability */
+    margin-bottom: 10px;
+}
+
+.blog-post img {
+    gap: 15px;
+    width: 50%;
+    height: auto;
 }
 
 /* Main content styles */
@@ -112,27 +154,34 @@ main {
 }
 
 .model {
+    
     margin: 20px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adjusted box shadow for depth */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
     transition: transform 0.3s ease;
 }
 
 .model:hover {
-    transform: translateY(-5px); /* Changed scale to translateY for elevation effect */
+    transform: scale(1.05);
+}
+
+.model img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .model h3 {
-    margin-bottom: 10px; /* Adjusted margin for better spacing */
+    margin-bottom: 5px;
 }
 
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px; /* Increased gap for better spacing */
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -140,22 +189,30 @@ main {
     max-width: 100%;
     height: auto;
 }
-
 /* Contact form styles */
 .contact-form {
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adjusted box shadow for depth */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h2 {
-    margin-bottom: 15px; /* Increased margin for better spacing */
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
     padding: 10px;
-    margin-bottom: 15px; /* Increased margin for better spacing */
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: border-color 0.3s ease;
@@ -166,7 +223,6 @@ main {
     color: #fff;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
 }
 
 .contact-form input[type="submit"]:hover {
@@ -182,7 +238,7 @@ main {
 footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px; /* Increased gap for better spacing */
+    gap: 10px;
     background-color: #333;
     color: #fff;
     padding: 20px 0;
@@ -200,16 +256,15 @@ footer {
 
 footer h3 {
     color: #ffd700;
-    margin-bottom: 15px; /* Increased margin for better spacing */
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
     display: block;
-    margin: 10px 0; /* Increased margin for better spacing */
+    margin: 5px 0;
     transition: color 0.3s ease;
-    align-text: left; /* Typo corrected */
+    align-text: left;
 }
 
 footer a:hover {
@@ -217,11 +272,15 @@ footer a:hover {
 }
 
 footer #contact-info p {
-    margin: 10px 0; /* Increased margin for better spacing */
+    margin: 5px 0;
 }
 
 footer p {
     font-size: 14px;
+}
+
+footer p:last-child {
+    margin-top: 10px;
 }
 
 .footer-row:not(:last-child) {
@@ -236,7 +295,11 @@ footer p {
         flex-direction: column;
     }
 
-    .hero-card,
+    .hero-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
     .model {
         width: 100%;
         margin: 10px 0;
