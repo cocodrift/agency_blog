@@ -60,6 +60,7 @@ nav a:hover {
 
 img,
 video {
+    gap: 10px;
     border-radius: 10px;
 }
 
@@ -138,7 +139,7 @@ video {
     margin-bottom: 10px;
 }
 
-.blog-post img video {
+.blog-post  {
     gap: 15px;
     width: 50%;
     height: auto;
