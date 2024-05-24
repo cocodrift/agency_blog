@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Added box-sizing for better layout control */
 }
 
 /* Body styles */
@@ -11,7 +12,6 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    font:bold;
 }
 
 /* Header styles */
@@ -60,26 +60,24 @@ nav a:hover {
 
 img,
 video {
-    gap: 10px;
     border-radius: 10px;
 }
 
 .video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 divided by 16) */
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 divided by 16) */
+    overflow: hidden;
 }
 
 .video-wrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-
 
 /* Hero section styles */
 .hero-section {
@@ -99,6 +97,7 @@ video {
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    transition: transform 0.3s ease; /* Moved hover transition here */
 }
 
 .hero-card:hover {
@@ -140,8 +139,7 @@ video {
 }
 
 .blog-post img {
-    gap: 15px;
-    width: 50%;
+    width: 100%; /* Changed width for better responsiveness */
     height: auto;
 }
 
@@ -153,7 +151,6 @@ main {
 }
 
 .model {
-    
     margin: 20px;
     padding: 20px;
     background-color: #fff;
@@ -188,6 +185,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 /* Contact form styles */
 .contact-form {
     background-color: #fff;
@@ -263,7 +261,6 @@ footer a {
     display: block;
     margin: 5px 0;
     transition: color 0.3s ease;
-    align-text: left;
 }
 
 footer a:hover {
@@ -294,14 +291,10 @@ footer p:last-child {
         flex-direction: column;
     }
 
-    .hero-card {
-        width: 100%;
-        margin: 10px 0;
-    }
-
+    .hero-card,
     .model {
-        width: 100%;
-        margin: 10px 0;
+        width: calc(100% - 20px); /* Adjusted width to account for padding and margin */
+        margin: 10px; /* Simplified margin */
     }
 
     .footer-row {
